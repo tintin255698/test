@@ -24,6 +24,7 @@
 body {
   height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
 
 h1, h2 {
@@ -46,25 +47,51 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media screen and (max-width: 1620px) {
+  section .row.reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 section #titre {
   padding-right: 6em;
   margin-bottom: 4em;
+}
+@media screen and (max-width: 1620px) {
+  section #titre {
+    padding-right: 0;
+    text-align: center;
+  }
 }
 section #titre p {
   margin-top: 1em;
   font-size: 20px;
 }
-section .column-right {
+section .col-lg-7.column-right {
   padding: 0;
   margin: auto;
   max-width: 50%;
 }
-section .column-right p {
+@media screen and (max-width: 1620px) {
+  section .col-lg-7.column-right {
+    max-width: none;
+    width: 98%;
+  }
+}
+@media screen and (max-width: 1620px) {
+  section .col-lg-7.column-right .text-center {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+section .col-lg-7.column-right p {
   margin: 0;
   font-size: 16px;
   font-family: "Poppins-Regular", sans-serif;
 }
-section .column-right .card {
+section .col-lg-7.column-right .card {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -80,35 +107,35 @@ section .column-right .card {
   -moz-transition: all 0.8s ease-in;
   transition: all 0.5s ease-in;
 }
-section .column-right .card.active {
+section .col-lg-7.column-right .card.active {
   background-color: cadetblue;
   opacity: 1;
 }
-section .column-right .card.active.card0 {
+section .col-lg-7.column-right .card.active.card0 {
   background-color: lightcoral;
 }
-section .column-right .card.active.card1 {
+section .col-lg-7.column-right .card.active.card1 {
   background-color: lightsalmon;
 }
-section .column-right .card.active.card2 {
+section .col-lg-7.column-right .card.active.card2 {
   background-color: lightgreen;
 }
-section .column-right .card.active.card3 {
+section .col-lg-7.column-right .card.active.card3 {
   background-color: lightpink;
 }
-section .column-right .card.active.card4 {
+section .col-lg-7.column-right .card.active.card4 {
   background-color: lightsteelblue;
 }
-section .column-right .card.active.card5 {
+section .col-lg-7.column-right .card.active.card5 {
   background-color: lightslategray;
 }
-section .column-right .card.active.card6 {
+section .col-lg-7.column-right .card.active.card6 {
   background-color: lightskyblue;
 }
-section .column-right .card.active.card7 {
+section .col-lg-7.column-right .card.active.card7 {
   background-color: lightgoldenrodyellow;
 }
-section .column-right .card img {
+section .col-lg-7.column-right .card img {
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -118,6 +145,11 @@ section .column-right .card img {
 section .column-left {
   padding: 0;
   height: 90vh;
+}
+@media screen and (max-width: 1620px) {
+  section .column-left {
+    width: 100%;
+  }
 }
 section .column-left .content {
   position: relative;
@@ -177,6 +209,13 @@ section .column-left .content .contentBox {
   transition: 0.5s;
   opacity: 0;
 }
+@media screen and (max-width: 1620px) {
+  section .column-left .content .contentBox {
+    height: 90vh;
+    top: 0;
+    left: 0;
+  }
+}
 section .column-left .content .contentBox .interesse-center {
   display: flex !important;
   align-items: center !important;
@@ -223,14 +262,27 @@ section .column-left .content .contentBox .content-part {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1620px) {
+  section .column-left .content .contentBox .content-part {
+    top: -5vw;
+    left: 10vw;
+    transform: none;
+    height: 70vh;
+    max-width: 30%;
+  }
+}
+@media screen and (max-width: 1240px) {
+  section .column-left .content .contentBox .content-part {
+    max-width: 50% !important;
+  }
 }
 section .column-left .content .contentBox.active {
   opacity: 1;
   transition-delay: 0.5s;
-}
-section .column-left .content .contentBox.active p.interesse {
-  position: relative !important;
-  z-index: 9999999 !important;
 }
 section .column-left .content .contentBox.active h2 {
   opacity: 1;
