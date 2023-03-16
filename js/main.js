@@ -2,7 +2,7 @@ let card = document.querySelectorAll(".card");
 let contentBox = document.querySelectorAll(".contentBox");
 
 for (let i = 0; i < card.length; i++) {
-    card[i].addEventListener("mouseover", function () {
+    card[i].addEventListener("click", function () {
         for (let i = 0; i < contentBox.length; i++) {
             contentBox[i].className = "contentBox";
         }
@@ -11,6 +11,7 @@ for (let i = 0; i < card.length; i++) {
         for (let i = 0; i < card.length; i++) {
             card[i].className = "card";
         }
-        this.className = "card active";
+        this.className = "card active card"+[i];
     });
 }
+

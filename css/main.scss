@@ -1,19 +1,40 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css");
+
 @font-face {
   font-family: Poppins-Bold;
   src: url(../font/Poppins-Bold.ttf);
 }
+
 @font-face {
   font-family: Poppins-Regular;
   src: url(../font/Poppins-Regular.ttf);
 }
+
 @font-face {
   font-family: Poppins-SemiBold;
   src: url(../font/Poppins-SemiBold.ttf);
 }
 
-$black : black;
-$white : white;
-$transparent : transparent;
+@font-face {
+  font-family: Poppins-Medium;
+  src: url(../font/Poppins-Medium.ttf);
+}
+
+
+$black: black;
+$white: white;
+$transparent: transparent;
+$cadetblue: cadetblue;
+$darkmagenta: darkmagenta;
+$color1: lightcoral;
+$color2: lightsalmon;
+$color3: lightgreen;
+$color4: lightpink;
+$color5: lightsteelblue;
+$color6: lightslategray;
+$color7: lightskyblue;
+$color8: lightgoldenrodyellow;
+
 
 * {
   margin: 0;
@@ -21,19 +42,20 @@ $transparent : transparent;
   box-sizing: border-box;
 }
 
-body{
+body {
   height: 100vh;
   position: relative;
 }
 
-h1, h2{
+h1, h2 {
   text-transform: uppercase;
   font-size: 30px;
   font-family: "Poppins-Bold", sans-serif;
 }
 
-h2{
-  color: $black
+h2 {
+  color: $black;
+  margin-bottom: 1em !important;
 }
 
 section {
@@ -41,25 +63,31 @@ section {
   color: $white;
   background-color: $black;
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  #titre{
+
+  #titre {
     padding-right: 6em;
     margin-bottom: 4em;
-    p{
+
+    p {
       margin-top: 1em;
       font-size: 20px;
     }
   }
+
   .column-right {
     padding: 0;
     margin: auto;
     max-width: 50%;
-    p{
+
+    p {
       margin: 0;
       font-size: 16px;
       font-family: "Poppins-Regular", sans-serif;
     }
+
     .card {
       display: flex;
       flex-direction: row;
@@ -74,13 +102,40 @@ section {
       cursor: pointer;
       -webkit-transition: all 0.8s ease-in;
       -moz-transition: all 0.8s ease-in;
-      transition: all 0.8s ease-in;
+      transition: all 0.5s ease-in;
 
       &:hover {
-        background-color: cadetblue;
+        background-color: $cadetblue;
+        opacity: 0.7;
       }
-      &.active{
-        background-color: cadetblue;
+
+      &.active {
+        background-color: $cadetblue;
+        opacity: 1;
+        &.card0{
+          background-color: $color1;
+        }
+      &.card1{
+        background-color: $color2;
+      }
+        &.card2{
+          background-color: $color3;
+        }
+        &.card3{
+          background-color: $color4;
+        }
+        &.card4{
+          background-color: $color5;
+        }
+        &.card5{
+          background-color: $color6;
+        }
+        &.card6{
+          background-color: $color7;
+        }
+        &.card7{
+          background-color: $color8;
+        }
       }
       img {
         height: 50px;
@@ -91,54 +146,66 @@ section {
       }
     }
   }
+
   .column-left {
     padding: 0;
     height: 90vh;
+
     .content {
       position: relative;
       width: 100%;
       overflow: inherit;
       .content-part {
-        background-color: rgba(255, 255, 255, 0.5);
-        p{
+        background-color: rgba(255, 255, 255, 0.7);
+        p {
           color: $black;
-          &.bold{
-            font-family: "Poppins-SemiBold", sans-serif;
+          font-family: "Poppins-Regular", sans-serif;
+          margin-bottom: 0.5em;
+          &.bold {
+            font-family: "Poppins-SemiBold", sans-serif !important;
           }
         }
       }
-      #content1{
-        background: no-repeat  url('../img/cheveux1.jpg');
+      #content1 {
+        background: no-repeat url('../img/cheveux1.jpg');
         background-size: cover
       }
-      #content2{
-        background: no-repeat  url('../img/cheveux2.jpg');
+
+      #content2 {
+        background: no-repeat url('../img/cheveux2.jpg');
         background-size: cover
       }
-      #content3{
-        background: no-repeat  url('../img/cheveux3.jpg');
+
+      #content3 {
+        background: no-repeat url('../img/cheveux3.jpg');
         background-size: cover
       }
-      #content4{
-        background: no-repeat  url('../img/cheveux4.jpg');
+
+      #content4 {
+        background: no-repeat url('../img/cheveux4.jpg');
         background-size: cover
       }
-      #content5{
-        background: no-repeat  url('../img/cheveux5.jpg');
+
+      #content5 {
+        background: no-repeat url('../img/cheveux5.jpg');
         background-size: cover
       }
-      #content6{
-        background: no-repeat  url('../img/cheveux6.jpg');
+
+      #content6 {
+        background: no-repeat url('../img/cheveux6.jpg');
         background-size: cover
       }
-      #content7{
-        background: no-repeat  url('../img/cheveux7.jpg');
+
+      #content7 {
+        background: no-repeat url('../img/cheveux7.jpg');
         background-size: cover
       }
-      #content8{
-        background: no-repeat  url('../img/cheveux8.jpg');
+
+      #content8 {
+        background: no-repeat url('../img/cheveux8.jpg');
         background-size: cover
       }
+
       .contentBox {
         position: absolute;
         width: 100%;
@@ -148,35 +215,78 @@ section {
         align-items: start;
         transition: 0.5s;
         opacity: 0;
+
+        .interesse-center {
+          display: flex !important;
+          align-items: center !important;
+          cursor: pointer;
+          height: 2em;
+        }
+
+        p.interesse {
+          font-family: "Poppins-SemiBold", sans-serif;
+          text-transform: uppercase;
+          font-size: 20px;
+          color: $darkmagenta;
+          cursor: pointer;
+          margin-top: 0.5em;
+          display: flex !important;
+          align-items: center !important;
+
+          &:after {
+            font-family: "Font Awesome 6 Free", serif;
+            font-weight: 900;
+            height: 20px;
+            width: 20px;
+            content: "\f054";
+            background-color: $darkmagenta;
+            color: $white;
+            border-radius: 20px !important;
+            display: inline-block;
+            font-size: 15px;
+            text-align: center;
+            margin-left: 1em;
+          }
+        }
+
         h2 {
           transition: 0.5s;
           opacity: 0;
         }
-        p {
-          transition: 0.5s;
-          opacity: 0;
-        }
+
         .content-part {
           transition: 0.5s;
           opacity: 0;
+          max-width: 65%;
+          padding: 3em;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -1vw;
+          -moz-border-radius: 10px;
+          -webkit-border-radius: 10px;
+          border-radius: 10px
         }
       }
+
       .contentBox.active {
         opacity: 1;
         transition-delay: 0.5s;
+
+        p.interesse {
+          position: relative !important;
+          z-index: 9999999 !important;
+        }
       }
 
       .contentBox.active h2 {
         opacity: 1;
         transition-delay: 0.5s;
       }
+
       .contentBox.active .content-part {
         opacity: 1;
-        transition-delay: 0.7s;
-      }
-      .contentBox.active p {
-        opacity: 1;
-        transition-delay: 0.9s;
+        transition-delay: 0.5s;
       }
     }
   }

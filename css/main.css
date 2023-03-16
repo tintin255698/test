@@ -1,3 +1,4 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css");
 @font-face {
   font-family: Poppins-Bold;
   src: url(../font/Poppins-Bold.ttf);
@@ -9,6 +10,10 @@
 @font-face {
   font-family: Poppins-SemiBold;
   src: url(../font/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: Poppins-Medium;
+  src: url(../font/Poppins-Medium.ttf);
 }
 * {
   margin: 0;
@@ -29,6 +34,7 @@ h1, h2 {
 
 h2 {
   color: black;
+  margin-bottom: 1em !important;
 }
 
 section {
@@ -72,13 +78,39 @@ section .column-right .card {
   cursor: pointer;
   -webkit-transition: all 0.8s ease-in;
   -moz-transition: all 0.8s ease-in;
-  transition: all 0.8s ease-in;
+  transition: all 0.5s ease-in;
 }
 section .column-right .card:hover {
   background-color: cadetblue;
+  opacity: 0.7;
 }
 section .column-right .card.active {
   background-color: cadetblue;
+  opacity: 1;
+}
+section .column-right .card.active.card0 {
+  background-color: lightcoral;
+}
+section .column-right .card.active.card1 {
+  background-color: lightsalmon;
+}
+section .column-right .card.active.card2 {
+  background-color: lightgreen;
+}
+section .column-right .card.active.card3 {
+  background-color: lightpink;
+}
+section .column-right .card.active.card4 {
+  background-color: lightsteelblue;
+}
+section .column-right .card.active.card5 {
+  background-color: lightslategray;
+}
+section .column-right .card.active.card6 {
+  background-color: lightskyblue;
+}
+section .column-right .card.active.card7 {
+  background-color: lightgoldenrodyellow;
 }
 section .column-right .card img {
   height: 50px;
@@ -97,13 +129,15 @@ section .column-left .content {
   overflow: inherit;
 }
 section .column-left .content .content-part {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 section .column-left .content .content-part p {
   color: black;
+  font-family: "Poppins-Regular", sans-serif;
+  margin-bottom: 0.5em;
 }
 section .column-left .content .content-part p.bold {
-  font-family: "Poppins-SemiBold", sans-serif;
+  font-family: "Poppins-SemiBold", sans-serif !important;
 }
 section .column-left .content #content1 {
   background: no-repeat url("../img/cheveux1.jpg");
@@ -147,21 +181,60 @@ section .column-left .content .contentBox {
   transition: 0.5s;
   opacity: 0;
 }
-section .column-left .content .contentBox h2 {
-  transition: 0.5s;
-  opacity: 0;
+section .column-left .content .contentBox .interesse-center {
+  display: flex !important;
+  align-items: center !important;
+  cursor: pointer;
+  height: 2em;
 }
-section .column-left .content .contentBox p {
+section .column-left .content .contentBox p.interesse {
+  font-family: "Poppins-SemiBold", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: darkmagenta;
+  cursor: pointer;
+  margin-top: 0.5em;
+  display: flex !important;
+  align-items: center !important;
+}
+section .column-left .content .contentBox p.interesse:after {
+  font-family: "Font Awesome 6 Free", serif;
+  font-weight: 900;
+  height: 20px;
+  width: 20px;
+  content: "\f054";
+  background-color: darkmagenta;
+  color: white;
+  border-radius: 20px !important;
+  display: inline-block;
+  font-size: 15px;
+  text-align: center;
+  margin-left: 1em;
+}
+section .column-left .content .contentBox h2 {
   transition: 0.5s;
   opacity: 0;
 }
 section .column-left .content .contentBox .content-part {
   transition: 0.5s;
   opacity: 0;
+  max-width: 65%;
+  padding: 3em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -1vw;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 }
 section .column-left .content .contentBox.active {
   opacity: 1;
   transition-delay: 0.5s;
+}
+section .column-left .content .contentBox.active p.interesse {
+  position: relative !important;
+  z-index: 9999999 !important;
 }
 section .column-left .content .contentBox.active h2 {
   opacity: 1;
@@ -169,11 +242,7 @@ section .column-left .content .contentBox.active h2 {
 }
 section .column-left .content .contentBox.active .content-part {
   opacity: 1;
-  transition-delay: 0.7s;
-}
-section .column-left .content .contentBox.active p {
-  opacity: 1;
-  transition-delay: 0.9s;
+  transition-delay: 0.5s;
 }
 
 /*# sourceMappingURL=main.css.map */
