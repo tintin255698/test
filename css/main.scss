@@ -104,39 +104,43 @@ section {
       -moz-transition: all 0.8s ease-in;
       transition: all 0.5s ease-in;
 
-      &:hover {
-        background-color: $cadetblue;
-        opacity: 0.7;
-      }
-
       &.active {
         background-color: $cadetblue;
         opacity: 1;
-        &.card0{
+
+        &.card0 {
           background-color: $color1;
         }
-      &.card1{
-        background-color: $color2;
-      }
-        &.card2{
+
+        &.card1 {
+          background-color: $color2;
+        }
+
+        &.card2 {
           background-color: $color3;
         }
-        &.card3{
+
+        &.card3 {
           background-color: $color4;
         }
-        &.card4{
+
+        &.card4 {
           background-color: $color5;
         }
-        &.card5{
+
+        &.card5 {
           background-color: $color6;
         }
-        &.card6{
+
+        &.card6 {
           background-color: $color7;
         }
-        &.card7{
+
+        &.card7 {
           background-color: $color8;
         }
       }
+
       img {
         height: 50px;
         width: 50px;
@@ -155,20 +159,24 @@ section {
       position: relative;
       width: 100%;
       overflow: inherit;
+
       .content-part {
         background-color: rgba(255, 255, 255, 0.7);
+
         p {
           color: $black;
           font-family: "Poppins-Regular", sans-serif;
           margin-bottom: 0.5em;
+
           &.bold {
             font-family: "Poppins-SemiBold", sans-serif !important;
           }
         }
       }
+
       #content1 {
         background: no-repeat url('../img/cheveux1.jpg');
-        background-size: cover
+        background-size: cover;
       }
 
       #content2 {
