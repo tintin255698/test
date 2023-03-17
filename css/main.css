@@ -47,6 +47,9 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+section .row.reverse {
+  background-color: black;
+}
 @media screen and (max-width: 1620px) {
   section .row.reverse {
     display: flex;
@@ -63,9 +66,29 @@ section #titre {
     text-align: center;
   }
 }
+@media screen and (max-width: 765px) {
+  section #titre {
+    margin-bottom: 1em;
+  }
+}
+@media (orientation: landscape) and (max-device-width: 950px) {
+  section #titre {
+    margin-top: 2em;
+  }
+}
+@media only screen and (max-width: 400px) {
+  section #titre {
+    margin-top: 5em;
+  }
+}
 section #titre p {
   margin-top: 1em;
   font-size: 20px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  section #titre p {
+    font-size: 18px;
+  }
 }
 section .col-lg-7.column-right {
   padding: 0;
@@ -86,10 +109,35 @@ section .col-lg-7.column-right {
     justify-content: center;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  section .col-lg-7.column-right .text-center {
+    height: 75vh;
+  }
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 767px) {
+  section .col-lg-7.column-right .text-center {
+    height: auto;
+  }
+}
+@media (orientation: landscape) and (max-device-width: 950px) {
+  section .col-lg-7.column-right .text-center {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 400px) {
+  section .col-lg-7.column-right .text-center {
+    margin-bottom: 10em;
+  }
+}
 section .col-lg-7.column-right p {
   margin: 0;
   font-size: 16px;
   font-family: "Poppins-Regular", sans-serif;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  section .col-lg-7.column-right p {
+    font-size: 14px;
+  }
 }
 section .col-lg-7.column-right .card {
   display: flex;
@@ -142,6 +190,11 @@ section .col-lg-7.column-right .card img {
   margin-right: 2em;
   margin-left: 0.5em;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  section .col-lg-7.column-right .card img {
+    margin-right: 0.5em;
+  }
+}
 section .column-left {
   padding: 0;
   height: 90vh;
@@ -149,6 +202,11 @@ section .column-left {
 @media screen and (max-width: 1620px) {
   section .column-left {
     width: 100%;
+  }
+}
+@media screen and (max-width: 1620px) and (min-width: 768px) and (max-width: 900px) {
+  section .column-left {
+    height: 75vh;
   }
 }
 section .column-left .content {
@@ -216,19 +274,35 @@ section .column-left .content .contentBox {
     left: 0;
   }
 }
+@media (orientation: landscape) and (max-device-width: 950px) {
+  section .column-left .content .contentBox {
+    height: 200vh;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  section .column-left .content .contentBox {
+    height: 75vh;
+  }
+}
+@media only screen and (max-width: 380px) {
+  section .column-left .content .contentBox {
+    height: 100vh;
+  }
+}
 section .column-left .content .contentBox .interesse-center {
   display: flex !important;
   align-items: center !important;
   cursor: pointer;
   height: 2em;
+  padding-top: 2em;
+  padding-bottom: 1em;
 }
 section .column-left .content .contentBox p.interesse {
   font-family: "Poppins-SemiBold", sans-serif;
   text-transform: uppercase;
   font-size: 20px;
   color: darkmagenta;
-  cursor: pointer;
-  margin-top: 0.5em;
+  margin-top: 1em;
   display: flex !important;
   align-items: center !important;
 }
@@ -268,16 +342,67 @@ section .column-left .content .contentBox .content-part {
 }
 @media screen and (max-width: 1620px) {
   section .column-left .content .contentBox .content-part {
-    top: -5vw;
-    left: 10vw;
+    max-width: none;
+    top: -9vh;
+    left: 15vw;
     transform: none;
     height: 70vh;
-    max-width: 30%;
+    width: 45%;
   }
 }
-@media screen and (max-width: 1240px) {
+@media screen and (min-width: 1620px) {
   section .column-left .content .contentBox .content-part {
-    max-width: 50% !important;
+    top: 50% !important;
+  }
+}
+@media screen and (min-width: 500px) {
+  section .column-left .content .contentBox .content-part {
+    top: -2vh;
+  }
+}
+@media (orientation: landscape) and (max-device-width: 950px) {
+  section .column-left .content .contentBox .content-part {
+    height: auto;
+    width: 70%;
+    top: 0;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  section .column-left .content .contentBox .content-part {
+    height: auto;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  section .column-left .content .contentBox .content-part {
+    top: 0;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  section .column-left .content .contentBox .content-part {
+    height: 65vh;
+    top: -7vh;
+  }
+}
+@media screen and (max-width: 700px) {
+  section .column-left .content .contentBox .content-part {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+  }
+}
+@media screen and (max-width: 550px) {
+  section .column-left .content .contentBox .content-part {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 376px) {
+  section .column-left .content .contentBox .content-part {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 400px) {
+  section .column-left .content .contentBox .content-part {
+    top: -12vh;
   }
 }
 section .column-left .content .contentBox.active {
