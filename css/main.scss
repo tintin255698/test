@@ -42,9 +42,11 @@ $color8: lightgoldenrodyellow;
   box-sizing: border-box;
 }
 
+body{
+  height: 100%;
+}
+
 body {
-  height: 100vh;
-  position: relative;
   overflow-x: hidden;
 }
 
@@ -59,16 +61,15 @@ h2 {
   margin-bottom: 1em !important;
 }
 
-section {
-  height: 90vh;
+.container-page {
+  width: 100%;
+  height: 100vh;
+  padding : 2em 0;
   color: $white;
-  background-color: $black;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  .row.reverse{
+  background-color: $white;
+  .content-page{
+    display: flex;
+    height: 100%;
     background-color: $black;
     @media screen and (max-width: 1620px) {
       display: flex;
@@ -77,8 +78,10 @@ section {
     }
   }
   #titre {
-    padding-right: 6em;
     margin-bottom: 4em;
+    h1, p{
+      text-align: start;
+    }
     @media screen and (max-width: 1620px) {
       padding-right: 0;
       text-align: center;
@@ -101,15 +104,20 @@ section {
     }
   }
 
-  .col-lg-7.column-right {
-    padding: 0;
-    margin: auto;
-    max-width: 50%;
+  .column-right {
+    width: 60%;
+    height: 100%;
     @media screen and (max-width: 1620px) {
       max-width: none;
       width: 98%;
     }
     .text-center{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 70%;
+      margin: auto;
       @media screen and (max-width: 1620px) {
         height: 90vh;
         display: flex;
@@ -205,8 +213,9 @@ section {
   }
 
   .column-left {
+    width: 40%;
     padding: 0;
-    height: 90vh;
+    height: 100%;
     @media screen and (max-width: 1620px) {
       width: 100%;
       @media screen and (min-width: 768px) and (max-width: 900px) {
@@ -216,6 +225,7 @@ section {
     .content {
       position: relative;
       width: 100%;
+      height: 100%;
       overflow: inherit;
 
       .content-part {
@@ -274,7 +284,7 @@ section {
       .contentBox {
         position: absolute;
         width: 100%;
-        height: 90vh;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: start;
