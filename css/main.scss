@@ -1,6 +1,10 @@
 //Import FontAwesome
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css");
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
 
 //Delete format
 
@@ -60,47 +64,52 @@ $color8: lightgoldenrodyellow;
   font-family: "Poppins-SemiBold", sans-serif;
 }
 
+@mixin cover {
+  background-size: cover;
+}
+
 //Define background
 
 
 #content1 {
   background: no-repeat url('../img/cheveux1.jpg');
-  background-size: cover;
+  @include cover
 }
 
 #content2 {
   background: no-repeat url('../img/cheveux2.jpg');
-  background-size: cover
+  @include cover
 }
 
 #content3 {
   background: no-repeat url('../img/cheveux3.jpg');
-  background-size: cover
+  @include cover
 }
 
 #content4 {
   background: no-repeat url('../img/cheveux4.jpg');
-  background-size: cover
+  @include cover
 }
 
 #content5 {
   background: no-repeat url('../img/cheveux5.jpg');
-  background-size: cover
+  @include cover
 }
 
 #content6 {
   background: no-repeat url('../img/cheveux6.jpg');
-  background-size: cover
+  @include cover
 }
 
 #content7 {
   background: no-repeat url('../img/cheveux7.jpg');
-  background-size: cover
+  @include cover
 }
 
 #content8 {
   background: no-repeat url('../img/cheveux8.jpg');
-  background-size: cover
+  @include cover
+
 }
 
 body {
@@ -133,16 +142,38 @@ body {
     padding: 5em 0;
     color: $white;
     background-color: $white;
-    @media screen and (max-width: 1300px) {
+    @media screen and (max-width: 1560px) {
+      padding-top: 10em;
      padding-bottom: 0;
-      height: 200vh;
+      height: 222vh;
+    }
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1200px) and (orientation : portrait) {
+     height: 190vh;
+    }
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1200px) and (orientation : landscape) {
+      height: 250vh;
+    }
+    @media only screen and (min-device-width : 320px) and (max-device-width : 915px) and (orientation : landscape) {
+      height: 510vh;
+    }
+    @media only screen and (max-device-width : 540px) and (orientation : portrait) {
+      height: 365vh !important;
+    }
+    @media screen and (max-width: 596px) {
+      height: 240vh;
+    }
+    @media screen and (max-width: 535px) {
+      height: 250vh;
+    }
+    @media screen and (max-width: 348px) {
+      height: 290vh;
     }
 
     .content_page {
       display: flex;
       height: 100%;
       background-color: $black;
-      @media screen and (max-width: 1300px) {
+      @media screen and (max-width: 1560px) {
         flex-direction: column-reverse;
       }
     }
@@ -151,7 +182,7 @@ body {
     .column_right {
       @include column-right;
       height: 100%;
-      @media screen and (max-width: 1300px) {
+      @media screen and (max-width: 1560px) {
        width: 100%;
       }
 
@@ -162,14 +193,14 @@ body {
         justify-content: center;
         width: 70%;
         margin: auto;
-        @media screen and (max-width: 1300px) {
-          width: 95%;
+        @media screen and (max-width: 1560px) {
+          width: 90%;
         }
         .titre_item {
           margin-bottom: 4em;
           h1, p {
             text-align: start;
-            @media screen and (max-width: 1300px) {
+            @media screen and (max-width: 1560px) {
               text-align: center;
             }
           }
@@ -187,6 +218,9 @@ body {
           p {
             &.text_bold {
               @include text_bold;
+              @media screen and (max-width: 535px) {
+                font-size: 13px;
+              }
             }
           }
 
@@ -196,11 +230,17 @@ body {
             border-radius: 50%;
             margin-right: 2em;
             margin-left: 0.5em;
+            @media screen and (max-width: 535px) {
+              margin-right: 0.5em;
+            }
           }
 
           #cards_left {
             margin-right: 3em;
             width: 50%;
+            @media screen and (max-width: 535px) {
+              margin-right: 0.5em;
+            }
           }
 
           #cards_right {
@@ -222,6 +262,9 @@ body {
             -webkit-transition: all 0.8s ease-in;
             -moz-transition: all 0.8s ease-in;
             transition: all 0.5s ease-in;
+            @media screen and (max-width: 535px) {
+              height: 6em;
+            }
 
             &.active {
               background-color: $cadetblue;
@@ -271,7 +314,7 @@ body {
       height: 100%;
       overflow: inherit;
       position: relative;
-      @media screen and (max-width: 1300px) {
+      @media screen and (max-width: 1560px) {
         width: 100%;
       }
         .contentBox {
@@ -301,9 +344,45 @@ body {
             justify-content: space-between;
             background-color: rgba(255, 255, 255, 0.7);
             @media screen and (max-width: 1800px) {
-              max-width: 95%;
               right: -2vw;
             }
+
+            @media screen and (max-width: 1560px) {
+              left: 9vw;
+              top: 10vh;
+              width: 60%;
+            }
+
+            @media screen and (max-width: 1150px) {
+              top: 13vh;
+            }
+            @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+              top: 13vh !important;
+            }
+            @media only screen and (min-device-width : 320px) and (max-device-width : 900px) and (orientation : landscape) {
+              top:37vh !important;
+            }
+            @media screen and (max-width: 905px) {
+              top: 17vh;
+            }
+            @media screen and (max-width: 770px) {
+              top: 15vh;
+              padding: 1.5em;
+            }
+            @media screen and (max-width: 675px) {
+              top: 18vh;
+            }
+            @media screen and (max-width: 565px) {
+              top: 21vh;
+            }
+            @media screen and (max-width: 535px) {
+              width: 100%;
+              position: absolute;
+              left: 50%;
+              top: -7vh;
+              transform: translateX(-50%);
+            }
+
             &_text {
               h2 {
                 transition: 0.5s;
