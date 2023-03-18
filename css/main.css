@@ -1,8 +1,4 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css");
-@viewport {
-  width: device-width;
-  zoom: 1;
-}
 * {
   margin: 0;
   padding: 0;
@@ -128,6 +124,11 @@ body .container_page {
 @media screen and (max-width: 348px) {
   body .container_page {
     height: 290vh;
+  }
+}
+@media screen and (max-width: 300px) {
+  body .container_page {
+    height: 455vh !important;
   }
 }
 body .container_page .content_page {
@@ -309,44 +310,39 @@ body .container_page .column_left .contentBox .content_part {
 @media screen and (max-width: 1560px) {
   body .container_page .column_left .contentBox .content_part {
     left: 9vw;
-    top: 10vh;
-    width: 60%;
-  }
-}
-@media screen and (max-width: 1150px) {
-  body .container_page .column_left .contentBox .content_part {
-    top: 13vh;
+    top: 25vh;
+    width: 40%;
+    height: 40em;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   body .container_page .column_left .contentBox .content_part {
-    top: 13vh !important;
+    top: 20vh !important;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 900px) and (orientation: landscape) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 916px) and (orientation: landscape) {
   body .container_page .column_left .contentBox .content_part {
-    top: 37vh !important;
+    top: 65vh !important;
   }
 }
-@media screen and (max-width: 905px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 500px) and (orientation: portrait) {
   body .container_page .column_left .contentBox .content_part {
-    top: 17vh;
+    top: -13vh;
   }
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 950px) {
   body .container_page .column_left .contentBox .content_part {
-    top: 15vh;
-    padding: 1.5em;
+    width: 50%;
   }
 }
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 745px) {
   body .container_page .column_left .contentBox .content_part {
-    top: 18vh;
+    width: 60%;
   }
 }
-@media screen and (max-width: 565px) {
+@media screen and (max-width: 620px) {
   body .container_page .column_left .contentBox .content_part {
-    top: 21vh;
+    width: 70%;
   }
 }
 @media screen and (max-width: 535px) {
@@ -354,7 +350,8 @@ body .container_page .column_left .contentBox .content_part {
     width: 100%;
     position: absolute;
     left: 50%;
-    top: -7vh;
+    top: -9vh;
+    height: auto;
     transform: translateX(-50%);
   }
 }

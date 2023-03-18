@@ -1,10 +1,6 @@
 //Import FontAwesome
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css");
-@viewport {
-  width: device-width;
-  zoom: 1;
-}
 
 //Delete format
 
@@ -168,6 +164,10 @@ body {
     @media screen and (max-width: 348px) {
       height: 290vh;
     }
+    @media screen and (max-width: 300px) {
+      height: 455vh !important;
+    }
+
 
     .content_page {
       display: flex;
@@ -346,40 +346,36 @@ body {
             @media screen and (max-width: 1800px) {
               right: -2vw;
             }
-
             @media screen and (max-width: 1560px) {
               left: 9vw;
-              top: 10vh;
-              width: 60%;
-            }
-
-            @media screen and (max-width: 1150px) {
-              top: 13vh;
+              top: 25vh;
+              width: 40%;
+              height: 40em;
             }
             @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-              top: 13vh !important;
+              top: 20vh !important;
             }
-            @media only screen and (min-device-width : 320px) and (max-device-width : 900px) and (orientation : landscape) {
-              top:37vh !important;
+            @media only screen and (min-device-width : 320px) and (max-device-width : 916px) and (orientation : landscape) {
+              top:65vh !important;
             }
-            @media screen and (max-width: 905px) {
-              top: 17vh;
+            @media only screen and (min-device-width : 320px) and (max-device-width : 500px) and (orientation : portrait) {
+              top: -13vh ;
             }
-            @media screen and (max-width: 770px) {
-              top: 15vh;
-              padding: 1.5em;
+            @media screen and (max-width: 950px) {
+              width: 50%;
             }
-            @media screen and (max-width: 675px) {
-              top: 18vh;
+            @media screen and (max-width: 745px) {
+              width: 60%;
             }
-            @media screen and (max-width: 565px) {
-              top: 21vh;
+            @media screen and (max-width: 620px) {
+              width: 70%;
             }
             @media screen and (max-width: 535px) {
               width: 100%;
               position: absolute;
               left: 50%;
-              top: -7vh;
+              top: -9vh;
+              height: auto;
               transform: translateX(-50%);
             }
 
