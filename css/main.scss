@@ -49,11 +49,11 @@ $color7: lightskyblue;
 $color8: lightgoldenrodyellow;
 
 @mixin column-left {
-  width: 35%;
+  width: 40%;
 }
 
 @mixin column-right {
-  width: 65%;
+  width: 60%;
 }
 
 @mixin text_bold {
@@ -61,6 +61,7 @@ $color8: lightgoldenrodyellow;
 }
 
 //Define background
+
 
 #content1 {
   background: no-repeat url('../img/cheveux1.jpg');
@@ -132,17 +133,27 @@ body {
     padding: 5em 0;
     color: $white;
     background-color: $white;
+    @media screen and (max-width: 1300px) {
+     padding-bottom: 0;
+      height: 200vh;
+    }
 
     .content_page {
       display: flex;
       height: 100%;
       background-color: $black;
+      @media screen and (max-width: 1300px) {
+        flex-direction: column-reverse;
+      }
     }
 
     //Column Right
     .column_right {
       @include column-right;
       height: 100%;
+      @media screen and (max-width: 1300px) {
+       width: 100%;
+      }
 
       &_element_text {
         height: 100%;
@@ -151,12 +162,16 @@ body {
         justify-content: center;
         width: 70%;
         margin: auto;
-
+        @media screen and (max-width: 1300px) {
+          width: 95%;
+        }
         .titre_item {
           margin-bottom: 4em;
-
           h1, p {
             text-align: start;
+            @media screen and (max-width: 1300px) {
+              text-align: center;
+            }
           }
 
           p {
@@ -256,7 +271,9 @@ body {
       height: 100%;
       overflow: inherit;
       position: relative;
-
+      @media screen and (max-width: 1300px) {
+        width: 100%;
+      }
         .contentBox {
           position: absolute;
           width: 100%;
@@ -283,7 +300,10 @@ body {
             flex-direction: column;
             justify-content: space-between;
             background-color: rgba(255, 255, 255, 0.7);
-
+            @media screen and (max-width: 1800px) {
+              max-width: 95%;
+              right: -2vw;
+            }
             &_text {
               h2 {
                 transition: 0.5s;

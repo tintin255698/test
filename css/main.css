@@ -84,14 +84,30 @@ body .container_page {
   color: white;
   background-color: white;
 }
+@media screen and (max-width: 1300px) {
+  body .container_page {
+    padding-bottom: 0;
+    height: 200vh;
+  }
+}
 body .container_page .content_page {
   display: flex;
   height: 100%;
   background-color: black;
 }
+@media screen and (max-width: 1300px) {
+  body .container_page .content_page {
+    flex-direction: column-reverse;
+  }
+}
 body .container_page .column_right {
-  width: 65%;
+  width: 60%;
   height: 100%;
+}
+@media screen and (max-width: 1300px) {
+  body .container_page .column_right {
+    width: 100%;
+  }
 }
 body .container_page .column_right_element_text {
   height: 100%;
@@ -101,11 +117,21 @@ body .container_page .column_right_element_text {
   width: 70%;
   margin: auto;
 }
+@media screen and (max-width: 1300px) {
+  body .container_page .column_right_element_text {
+    width: 95%;
+  }
+}
 body .container_page .column_right_element_text .titre_item {
   margin-bottom: 4em;
 }
 body .container_page .column_right_element_text .titre_item h1, body .container_page .column_right_element_text .titre_item p {
   text-align: start;
+}
+@media screen and (max-width: 1300px) {
+  body .container_page .column_right_element_text .titre_item h1, body .container_page .column_right_element_text .titre_item p {
+    text-align: center;
+  }
 }
 body .container_page .column_right_element_text .titre_item p {
   margin-top: 1em;
@@ -177,11 +203,16 @@ body .container_page .column_right_element_text .cards .card.active.card7 {
   background-color: lightgoldenrodyellow;
 }
 body .container_page .column_left {
-  width: 35%;
+  width: 40%;
   padding: 0;
   height: 100%;
   overflow: inherit;
   position: relative;
+}
+@media screen and (max-width: 1300px) {
+  body .container_page .column_left {
+    width: 100%;
+  }
 }
 body .container_page .column_left .contentBox {
   position: absolute;
@@ -209,6 +240,12 @@ body .container_page .column_left .contentBox .content_part {
   flex-direction: column;
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.7);
+}
+@media screen and (max-width: 1800px) {
+  body .container_page .column_left .contentBox .content_part {
+    max-width: 95%;
+    right: -2vw;
+  }
 }
 body .container_page .column_left .contentBox .content_part_text h2 {
   transition: 0.5s;
