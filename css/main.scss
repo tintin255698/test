@@ -140,19 +140,19 @@ body {
     background-color: $white;
     @media screen and (max-width: 1560px) {
       padding-top: 10em;
-     padding-bottom: 0;
+      padding-bottom: 0;
       height: 222vh;
     }
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1200px) and (orientation : portrait) {
-     height: 190vh;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1200px) and (orientation: portrait) {
+      height: 190vh;
     }
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1200px) and (orientation : landscape) {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1200px) and (orientation: landscape) {
       height: 250vh;
     }
-    @media only screen and (min-device-width : 320px) and (max-device-width : 915px) and (orientation : landscape) {
+    @media only screen and (min-device-width: 320px) and (max-device-width: 915px) and (orientation: landscape) {
       height: 510vh;
     }
-    @media only screen and (max-device-width : 540px) and (orientation : portrait) {
+    @media only screen and (max-device-width: 540px) and (orientation: portrait) {
       height: 365vh !important;
     }
     @media screen and (max-width: 596px) {
@@ -183,7 +183,7 @@ body {
       @include column-right;
       height: 100%;
       @media screen and (max-width: 1560px) {
-       width: 100%;
+        width: 100%;
       }
 
       &_element_text {
@@ -196,8 +196,10 @@ body {
         @media screen and (max-width: 1560px) {
           width: 90%;
         }
+
         .titre_item {
           margin-bottom: 4em;
+
           h1, p {
             text-align: start;
             @media screen and (max-width: 1560px) {
@@ -307,6 +309,54 @@ body {
       }
     }
 
+
+    .chattez_block{
+      @media screen and (min-width: 1560px) {
+       display: none;
+      }
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: 10vh;
+      right: 15vw;
+      .chattez_text{
+        background-color: $white;
+        border-radius: 20px;
+        padding: 1em 1em;
+        margin-right: 1em;
+        p{
+          display: flex;
+          align-items: center;
+          color: $black;
+          font-family: "Medium", sans-serif;
+          font-size: 20px;
+          &:after{
+            content: url("../img/main.png");
+            margin-left: 1em;
+          }
+        }
+      }
+      .chattez_bulle{
+        position: relative;
+        background-color: $black;
+        width: min-content;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        img{
+          padding: 1em;
+        }
+        .nombre{
+          position: absolute;
+          background-color: red;
+          border-radius: 50%;
+          padding: 0.2em 0.5em;
+          top: -10px;
+          right: -10px;
+        }
+      }
+    }
+
     //Column Left
     .column_left {
       @include column-left;
@@ -317,130 +367,130 @@ body {
       @media screen and (max-width: 1560px) {
         width: 100%;
       }
-        .contentBox {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: start;
+
+
+      .contentBox {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        transition: 0.5s;
+        opacity: 0;
+
+        .content_part {
           transition: 0.5s;
           opacity: 0;
-
-          .content_part {
-            transition: 0.5s;
-            opacity: 0;
-            max-width: 70%;
-            padding: 3em;
+          max-width: 70%;
+          padding: 3em;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -5vw;
+          -moz-border-radius: 10px;
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          background-color: rgba(255, 255, 255, 0.7);
+          @media screen and (max-width: 1800px) {
+            right: -2vw;
+          }
+          @media screen and (max-width: 1560px) {
+            left: 9vw;
+            top: 25vh;
+            width: 40%;
+            height: 40em;
+          }
+          @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+            top: 20vh !important;
+          }
+          @media only screen and (min-device-width: 320px) and (max-device-width: 916px) and (orientation: landscape) {
+            top: 65vh !important;
+          }
+          @media only screen and (min-device-width: 320px) and (max-device-width: 500px) and (orientation: portrait) {
+            top: -13vh;
+          }
+          @media screen and (max-width: 950px) {
+            width: 50%;
+          }
+          @media screen and (max-width: 745px) {
+            width: 60%;
+          }
+          @media screen and (max-width: 620px) {
+            width: 70%;
+          }
+          @media screen and (max-width: 535px) {
+            width: 100%;
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            right: -5vw;
-            -moz-border-radius: 10px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            background-color: rgba(255, 255, 255, 0.7);
-            @media screen and (max-width: 1800px) {
-              right: -2vw;
-            }
-            @media screen and (max-width: 1560px) {
-              left: 9vw;
-              top: 25vh;
-              width: 40%;
-              height: 40em;
-            }
-            @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-              top: 20vh !important;
-            }
-            @media only screen and (min-device-width : 320px) and (max-device-width : 916px) and (orientation : landscape) {
-              top:65vh !important;
-            }
-            @media only screen and (min-device-width : 320px) and (max-device-width : 500px) and (orientation : portrait) {
-              top: -13vh ;
-            }
-            @media screen and (max-width: 950px) {
-              width: 50%;
-            }
-            @media screen and (max-width: 745px) {
-              width: 60%;
-            }
-            @media screen and (max-width: 620px) {
-              width: 70%;
-            }
-            @media screen and (max-width: 535px) {
-              width: 100%;
-              position: absolute;
-              left: 50%;
-              top: -9vh;
-              height: auto;
-              transform: translateX(-50%);
+            left: 50%;
+            top: -9vh;
+            height: auto;
+            transform: translateX(-50%);
+          }
+          &_text {
+            h2 {
+              transition: 0.5s;
+              opacity: 0;
             }
 
-            &_text {
-              h2 {
-                transition: 0.5s;
-                opacity: 0;
-              }
+            p {
+              color: $black;
+              font-family: "Poppins-Regular", sans-serif;
+              margin-bottom: 0.5em;
 
-              p {
-                color: $black;
-                font-family: "Poppins-Regular", sans-serif;
-                margin-bottom: 0.5em;
-
-                &.text_bold {
-                  @include text_bold;
-                }
-              }
-            }
-
-            .block_interesse {
-              cursor: pointer;
-              padding-top: 1em;
-
-              &_text {
-                font-family: "Poppins-SemiBold", sans-serif;
-                text-transform: uppercase;
-                font-size: 20px;
-                color: $darkmagenta;
-                display: flex;
-                align-items: center;
-
-                &:after {
-                  font-family: "Font Awesome 6 Free", serif;
-                  font-weight: 900;
-                  content: "\f054";
-                  background-color: $darkmagenta;
-                  color: $white;
-                  border-radius: 50%;
-                  font-size: 15px;
-                  text-align: center;
-                  margin-left: 1em;
-                  padding: 0.2em 0.3em;
-                }
+              &.text_bold {
+                @include text_bold;
               }
             }
           }
+          .block_interesse {
+            cursor: pointer;
+            padding-top: 1em;
 
+            &_text {
+              font-family: "Poppins-SemiBold", sans-serif;
+              text-transform: uppercase;
+              font-size: 20px;
+              color: $darkmagenta;
+              display: flex;
+              align-items: center;
+
+              &:after {
+                font-family: "Font Awesome 6 Free", serif;
+                font-weight: 900;
+                content: "\f054";
+                background-color: $darkmagenta;
+                color: $white;
+                border-radius: 50%;
+                font-size: 15px;
+                text-align: center;
+                margin-left: 1em;
+                padding: 0.2em 0.3em;
+              }
+            }
+          }
         }
 
-        //Transition
-        .contentBox.active {
-          opacity: 1;
-          transition-delay: 0.5s;
-        }
+      }
 
-        .contentBox.active h2 {
-          opacity: 1;
-          transition-delay: 0.5s;
-        }
+      //Transition
+      .contentBox.active {
+        opacity: 1;
+        transition-delay: 0.5s;
+      }
 
-        .contentBox.active .content_part {
-          opacity: 1;
-          transition-delay: 0.5s;
-        }
+      .contentBox.active h2 {
+        opacity: 1;
+        transition-delay: 0.5s;
+      }
+
+      .contentBox.active .content_part {
+        opacity: 1;
+        transition-delay: 0.5s;
+      }
 
     }
   }

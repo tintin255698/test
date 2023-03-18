@@ -11,7 +11,7 @@ for (let i = 0; i < card.length; i++) {
         for (let i = 0; i < card.length; i++) {
             card[i].className = "card";
         }
-        this.className = "card active card"+[i];
+        this.className = "card active card" + [i];
     });
 }
 
