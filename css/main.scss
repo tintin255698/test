@@ -1,4 +1,16 @@
+//Import FontAwesome
+
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css");
+
+//Delete format
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//Import Font
 
 @font-face {
   font-family: Poppins-Bold;
@@ -20,6 +32,7 @@
   src: url(../font/Poppins-Medium.ttf);
 }
 
+//Variable and mixin
 
 $black: black;
 $white: white;
@@ -35,399 +48,305 @@ $color6: lightslategray;
 $color7: lightskyblue;
 $color8: lightgoldenrodyellow;
 
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@mixin column-left {
+  width: 35%;
 }
 
-body{
-  height: 100%;
+@mixin column-right {
+  width: 65%;
+}
+
+@mixin text_bold {
+  font-family: "Poppins-SemiBold", sans-serif;
+}
+
+//Define background
+
+#content1 {
+  background: no-repeat url('../img/cheveux1.jpg');
+  background-size: cover;
+}
+
+#content2 {
+  background: no-repeat url('../img/cheveux2.jpg');
+  background-size: cover
+}
+
+#content3 {
+  background: no-repeat url('../img/cheveux3.jpg');
+  background-size: cover
+}
+
+#content4 {
+  background: no-repeat url('../img/cheveux4.jpg');
+  background-size: cover
+}
+
+#content5 {
+  background: no-repeat url('../img/cheveux5.jpg');
+  background-size: cover
+}
+
+#content6 {
+  background: no-repeat url('../img/cheveux6.jpg');
+  background-size: cover
+}
+
+#content7 {
+  background: no-repeat url('../img/cheveux7.jpg');
+  background-size: cover
+}
+
+#content8 {
+  background: no-repeat url('../img/cheveux8.jpg');
+  background-size: cover
 }
 
 body {
-  overflow-x: hidden;
-}
 
-h1 {
-  text-transform: uppercase;
-  font-size: 40px;
-  font-family: "Poppins-Bold", sans-serif;
-}
+  //General
+  h1, h2 {
+    font-family: "Poppins-Bold", sans-serif;
+  }
 
-h2 {
-  color: $black;
-  margin-bottom: 1em !important;
-  font-size: 30px;
-}
+  h1 {
+    text-transform: uppercase;
+    font-size: 40px;
+  }
 
-.container-page {
-  width: 100%;
-  height: 100vh;
-  padding : 2em 0;
-  color: $white;
-  background-color: $white;
-  .content-page{
-    display: flex;
-    height: 100%;
-    background-color: $black;
-    @media screen and (max-width: 1620px) {
+  h2 {
+    color: $black;
+    margin-bottom: 1em !important;
+    font-size: 30px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    font-family: "Poppins-Regular", sans-serif;
+  }
+
+  //Container
+  .container_page {
+    height: 100vh;
+    padding: 5em 0;
+    color: $white;
+    background-color: $white;
+
+    .content_page {
       display: flex;
-      flex-direction: column-reverse;
-
-    }
-  }
-  #titre {
-    margin-bottom: 4em;
-    h1, p{
-      text-align: start;
-    }
-    @media screen and (max-width: 1620px) {
-      padding-right: 0;
-      text-align: center;
-    }
-    @media screen and (max-width: 765px) {
-      margin-bottom: 1em;
-    }
-    @media (orientation: landscape) and (max-device-width : 950px) {
-      margin-top: 2em;
-    }
-    @media only screen and (max-width: 400px) {
-      margin-top: 5em;
-    }
-    p {
-      margin-top: 1em;
-      font-size: 20px;
-      @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-        font-size: 18px;
-      }
-    }
-  }
-
-  .column-right {
-    width: 60%;
-    height: 100%;
-    @media screen and (max-width: 1620px) {
-      max-width: none;
-      width: 98%;
-    }
-    .text-center{
       height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 70%;
-      margin: auto;
-      @media screen and (max-width: 1620px) {
-        height: 90vh;
+      background-color: $black;
+    }
+
+    //Column Right
+    .column_right {
+      @include column-right;
+      height: 100%;
+
+      &_element_text {
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-      }
-      @media screen and (min-width: 768px) and (max-width: 900px) {
-        height: 75vh;
-      }
-      @media only screen and (min-device-width : 481px) and (max-device-width : 767px) {
-        height: auto;
-      }
-      @media (orientation: landscape) and (max-device-width : 950px) {
-        height: auto;
-      }
-      @media only screen and (max-width: 400px) {
-        margin-bottom: 10em;
-      }
-    }
-    p {
-      margin: 0;
-      font-size: 16px;
-      font-family: "Poppins-Regular", sans-serif;
-      @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-       font-size: 14px;
-      }
-    }
-.cards{
-  display: flex;
-  flex-direction: row;
-}
-    #card-left{
-      margin-right: 2em;
-    }
-    .card {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 0.5em 0.5em;
-      border: 1px solid $white;
-      background-color: $transparent;
-      -moz-border-radius: 10px;
-      -webkit-border-radius: 10px;
-      border-radius: 10px;
-      margin: 1em 0;
-      cursor: pointer;
-      -webkit-transition: all 0.8s ease-in;
-      -moz-transition: all 0.8s ease-in;
-      transition: all 0.5s ease-in;
-width: 35em;
-      &.active {
-        background-color: $cadetblue;
-        opacity: 1;
+        width: 70%;
+        margin: auto;
 
-        &.card0 {
-          background-color: $color1;
+        .titre_item {
+          margin-bottom: 4em;
+
+          h1, p {
+            text-align: start;
+          }
+
+          p {
+            margin-top: 1em;
+            font-size: 20px;
+          }
         }
 
-        &.card1 {
-          background-color: $color2;
-        }
+        .cards {
+          display: flex;
+          flex-direction: row;
 
-        &.card2 {
-          background-color: $color3;
-        }
+          p {
+            &.text_bold {
+              @include text_bold;
+            }
+          }
 
-        &.card3 {
-          background-color: $color4;
-        }
+          img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin-right: 2em;
+            margin-left: 0.5em;
+          }
 
-        &.card4 {
-          background-color: $color5;
-        }
+          #cards_left {
+            margin-right: 3em;
+            width: 50%;
+          }
 
-        &.card5 {
-          background-color: $color6;
-        }
+          #cards_right {
+            width: 50%;
+          }
 
-        &.card6 {
-          background-color: $color7;
-        }
+          .card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0.5em 0.5em;
+            border: 1px solid $white;
+            background-color: $transparent;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            margin: 1em 0;
+            cursor: pointer;
+            -webkit-transition: all 0.8s ease-in;
+            -moz-transition: all 0.8s ease-in;
+            transition: all 0.5s ease-in;
 
-        &.card7 {
-          background-color: $color8;
-        }
-      }
+            &.active {
+              background-color: $cadetblue;
+              opacity: 1;
 
-      img {
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        margin-right: 2em;
-        margin-left: 0.5em;
-        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-          margin-right: 0.5em;
-        }
-      }
-    }
-  }
+              &.card0 {
+                background-color: $color1;
+              }
 
-  .column-left {
-    width: 40%;
-    padding: 0;
-    height: 100%;
-    @media screen and (max-width: 1620px) {
-      width: 100%;
-      @media screen and (min-width: 768px) and (max-width: 900px) {
-        height: 75vh;
+              &.card1 {
+                background-color: $color2;
+              }
+
+              &.card2 {
+                background-color: $color3;
+              }
+
+              &.card3 {
+                background-color: $color4;
+              }
+
+              &.card4 {
+                background-color: $color5;
+              }
+
+              &.card5 {
+                background-color: $color6;
+              }
+
+              &.card6 {
+                background-color: $color7;
+              }
+
+              &.card7 {
+                background-color: $color8;
+              }
+            }
+          }
+        }
       }
     }
-    .content {
-      position: relative;
-      width: 100%;
+
+    //Column Left
+    .column_left {
+      @include column-left;
+      padding: 0;
       height: 100%;
       overflow: inherit;
+      position: relative;
 
-      .content-part {
-        background-color: rgba(255, 255, 255, 0.7);
-
-        p {
-          color: $black;
-          font-family: "Poppins-Regular", sans-serif;
-          margin-bottom: 0.5em;
-          &.bold {
-            font-family: "Poppins-SemiBold", sans-serif !important;
-          }
-        }
-      }
-
-      #content1 {
-        background: no-repeat url('../img/cheveux1.jpg');
-        background-size: cover;
-      }
-
-      #content2 {
-        background: no-repeat url('../img/cheveux2.jpg');
-        background-size: cover
-      }
-
-      #content3 {
-        background: no-repeat url('../img/cheveux3.jpg');
-        background-size: cover
-      }
-
-      #content4 {
-        background: no-repeat url('../img/cheveux4.jpg');
-        background-size: cover
-      }
-
-      #content5 {
-        background: no-repeat url('../img/cheveux5.jpg');
-        background-size: cover
-      }
-
-      #content6 {
-        background: no-repeat url('../img/cheveux6.jpg');
-        background-size: cover
-      }
-
-      #content7 {
-        background: no-repeat url('../img/cheveux7.jpg');
-        background-size: cover
-      }
-
-      #content8 {
-        background: no-repeat url('../img/cheveux8.jpg');
-        background-size: cover
-      }
-
-      .contentBox {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: start;
-        transition: 0.5s;
-        opacity: 0;
-        @media screen and (max-width: 1620px) {
-         height: 90vh;
-          top: 0;
-          left: 0;
-        }
-        @media (orientation: landscape) and (max-device-width : 950px) {
-          height: 200vh;
-        }
-        @media screen and (min-width: 768px) and (max-width: 900px) {
-          height: 75vh;
-        }
-        @media only screen and (max-width: 380px) {
-          height: 100vh;
-        }
-        .interesse-center {
-          display: flex !important;
-          align-items: center !important;
-          cursor: pointer;
-          height: 2em;
-          padding-top: 2em;
-          padding-bottom: 1em;
-
-          }
-
-        p.interesse {
-          font-family: "Poppins-SemiBold", sans-serif;
-          text-transform: uppercase;
-          font-size: 20px;
-          color: $darkmagenta;
-          margin-top: 1em;
-          display: flex !important;
-          align-items: center !important;
-
-          &:after {
-            font-family: "Font Awesome 6 Free", serif;
-            font-weight: 900;
-            height: 20px;
-            width: 20px;
-            content: "\f054";
-            background-color: $darkmagenta;
-            color: $white;
-            border-radius: 20px !important;
-            display: inline-block;
-            font-size: 15px;
-            text-align: center;
-            margin-left: 1em;
-          }
-        }
-
-        h2 {
-          transition: 0.5s;
-          opacity: 0;
-        }
-
-        .content-part {
-          transition: 0.5s;
-          opacity: 0;
-          max-width: 65%;
-          padding: 3em;
+        .contentBox {
           position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          right: -5vw;
-          -moz-border-radius: 10px;
-          -webkit-border-radius: 10px;
-          border-radius: 10px;
+          width: 100%;
+          height: 100%;
           display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          @media screen and (max-width: 1620px) {
-            max-width: none;
-            top: -9vh;
-            left: 15vw;
-            transform: none;
-            height: 70vh;
-            width: 45%;
-          }
-          @media screen and (min-width: 1620px) {
-            top: 50% !important;
-          }
-          @media screen and (min-width: 500px) {
-            top: -2vh ;
-          }
-          @media (orientation: landscape) and (max-device-width : 950px) {
-            height: auto;
-            width: 70%;
-            top: 0
-          }
-          @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-          height: auto;
-          }
-          @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-            top: 0;
-          }
+          justify-content: center;
+          align-items: start;
+          transition: 0.5s;
+          opacity: 0;
 
-          @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-            height: 65vh;
-            top: -7vh;
-          }
-          @media screen and (max-width: 700px) {
-            left: 50%;
-            transform: translateX(-50%);
-            width: 70%;
-          }
-          @media screen and (max-width: 550px) {
-            width: 90%;
-          }
-          @media screen and (max-width: 376px) {
-            height: auto;
-          }
-          @media only screen and (max-width: 400px) {
-            top: -12vh;
+          .content_part {
+            transition: 0.5s;
+            opacity: 0;
+            max-width: 70%;
+            padding: 3em;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -5vw;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: rgba(255, 255, 255, 0.7);
+
+            &_text {
+              h2 {
+                transition: 0.5s;
+                opacity: 0;
+              }
+
+              p {
+                color: $black;
+                font-family: "Poppins-Regular", sans-serif;
+                margin-bottom: 0.5em;
+
+                &.text_bold {
+                  @include text_bold;
+                }
+              }
+            }
+
+            .block_interesse {
+              cursor: pointer;
+              padding-top: 1em;
+
+              &_text {
+                font-family: "Poppins-SemiBold", sans-serif;
+                text-transform: uppercase;
+                font-size: 20px;
+                color: $darkmagenta;
+                display: flex;
+                align-items: center;
+
+                &:after {
+                  font-family: "Font Awesome 6 Free", serif;
+                  font-weight: 900;
+                  content: "\f054";
+                  background-color: $darkmagenta;
+                  color: $white;
+                  border-radius: 50%;
+                  font-size: 15px;
+                  text-align: center;
+                  margin-left: 1em;
+                  padding: 0.2em 0.3em;
+                }
+              }
+            }
           }
 
         }
-      }
 
-      .contentBox.active {
-        opacity: 1;
-        transition-delay: 0.5s;
-      }
+        //Transition
+        .contentBox.active {
+          opacity: 1;
+          transition-delay: 0.5s;
+        }
 
-      .contentBox.active h2 {
-        opacity: 1;
-        transition-delay: 0.5s;
-      }
+        .contentBox.active h2 {
+          opacity: 1;
+          transition-delay: 0.5s;
+        }
 
-      .contentBox.active .content-part {
-        opacity: 1;
-        transition-delay: 0.5s;
-      }
+        .contentBox.active .content_part {
+          opacity: 1;
+          transition-delay: 0.5s;
+        }
+
     }
   }
 }
