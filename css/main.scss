@@ -319,6 +319,12 @@ body {
       position: absolute;
       bottom: 10vh;
       right: 15vw;
+      @media screen and (max-width: 450px) {
+        position: absolute ;
+        left: 50% ;
+        transform: translateX(-50%) ;
+        right: auto ;
+      }
       .chattez_text{
         background-color: $white;
         border-radius: 20px;

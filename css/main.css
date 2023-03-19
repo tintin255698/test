@@ -275,6 +275,14 @@ body .container_page .chattez_block {
     display: none;
   }
 }
+@media screen and (max-width: 450px) {
+  body .container_page .chattez_block {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+  }
+}
 body .container_page .chattez_block .chattez_text {
   background-color: white;
   border-radius: 20px;
